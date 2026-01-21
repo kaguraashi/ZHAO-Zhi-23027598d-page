@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZHAO Zhi - Computer Science Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    ZHAO Zhi
+                </h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="flex-1 text-center md:text-left fade-in">
+                    <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+                        Hi, I'm <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ZHAO Zhi</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-6">
+                        Computer Science Student & Aspiring VR Developer
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 max-w-2xl">
+                        Year 3 Computer Science student at The Hong Kong Polytechnic University (PolyU), 
+                        passionate about VR game development and interactive experiences.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="btn-primary px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <img src="profile-photo.jpg" alt="ZHAO Zhi" class="relative rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h3 class="section-title text-4xl font-bold text-center mb-12">About Me</h3>
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 shadow-lg">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    I am a year 3 Computer Science student at The Hong Kong Polytechnic University (PolyU), 
+                    passionate about technology and innovation.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    I have a strong interest in VR game development. <strong>Deadpool VR</strong> is my current favorite game, 
+                    and I hope that one day I can develop such immersive VR experiences!
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        <span class="text-gray-700">Year 3 Student</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <span class="text-gray-700">PolyU</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
+                        <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-gray-700">VR Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="section-title text-4xl font-bold text-center mb-12">Skills & Technologies</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="skill-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Programming</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+
+                <!-- Web Technologies -->
+                <div class="skill-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Web Development</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Tools</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="section-title text-4xl font-bold text-center mb-12">Past Projects & Achievements</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800">PolyU Study Hub</h4>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        A comprehensive platform that helps PolyU students manage their courses and bookmarks more efficiently. 
+                        Developed using HTML, JavaScript, CSS, and SQL.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">SQL</span>
+                    </div>
+                    <a href="https://github.com/kaguraashi/23027598d_ZHAOZhi_webproject_demo_2.git" 
+                       target="_blank" 
+                       class="inline-flex items-center text-primary hover:text-secondary transition-colors">
+                        <span class="font-semibold">View on GitHub</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Future Project Placeholder -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 shadow-lg border-2 border-dashed border-primary/30">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800">VR Game Development</h4>
+                    </div>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Currently learning and exploring VR game development, inspired by Deadpool VR. 
+                        Stay tuned for upcoming projects!
+                    </p>
+                    <div class="flex items-center text-secondary">
+                        <svg class="w-5 h-5 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="font-semibold">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h3 class="section-title text-4xl font-bold text-center mb-12">Get In Touch</h3>
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
+                <p class="text-center text-lg text-gray-700 mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="mailto:23027598d@connect.polyu.hk" 
+                       class="contact-card flex items-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 font-semibold">Email</p>
+                            <p class="text-gray-800 break-all">23027598d@connect.polyu.hk</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/kaguraashi" 
+                       target="_blank"
+                       class="contact-card flex items-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 font-semibold">GitHub</p>
+                            <p class="text-gray-800">@kaguraashi</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2026 ZHAO Zhi. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">Built with passion and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
